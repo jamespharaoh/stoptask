@@ -1,0 +1,13 @@
+<h1>Register for an account</h1>
+
+<%= form_for User.new, :url => { :action => "register" } do |f| %>
+
+  <%= error_messages_for :user %>
+ 
+  <%= f.label :username %>: <%= f.text_field :username %><br/>
+  <%= f.label :email %>: <%= f.text_field :email %><br/>
+  <%= f.label :password %>: <%= f.text_field :password %><br/>
+
+  <%= submit_tag "Register"  %>
+
+<% end %>
